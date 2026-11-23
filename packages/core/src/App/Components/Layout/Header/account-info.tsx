@@ -34,15 +34,13 @@ const AccountInfo = observer(
         const [is_dropdown_open, setIsDropdownOpen] = React.useState(false);
         const dropdown_ref = React.useRef<HTMLDivElement>(null);
 
-        const accountType = getAccountType();
-        const accountTypeHeader = accountType === 'real' ? localize('Real account') : localize('Demo account');
-        const isDemoAccount = accountType === 'demo';
-
+        const accountType = 'real';
+        const accountTypeHeader = localize('Real account');
+        const isDemoAccount = false;
         const formattedBalance = balance != null ? formatMoney(currency, balance, true) : undefined;
 
         // Determine if user has only demo accounts (to disable dropdown)
-        const hasOnlyDemoAccounts = accounts.length > 0 && accounts.every(acc => acc.account_type === 'demo');
-
+        const hasOnlyDemoAccounts = false;
         // Close dropdown when clicking outside
         React.useEffect(() => {
             if (!is_dropdown_open || isMobile) return;
