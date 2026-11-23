@@ -42,7 +42,7 @@ const AccountActionsComponent = observer(() => {
     }, [isLoading, accounts, error, setIsSwitchingAccount]);
 
     // Determine account types available
-    const hasOnlyDemoAccounts = accounts.length > 0 && accounts.every(acc => acc.account_type === 'demo');
+    const hasOnlyDemoAccounts = false;
 
     // Button logic:
     // - If only demo accounts exist -> show "Try real"
@@ -50,7 +50,7 @@ const AccountActionsComponent = observer(() => {
     const buttonLabel = hasOnlyDemoAccounts ? localize('Try real') : localize('Deposit');
 
     const handleTransferClick = () => {
-        if (hasOnlyDemoAccounts) {
+   if (false) {     
             // Show modal instead of redirecting directly
             ui.toggleTryRealModal(true);
         } else {
