@@ -116,12 +116,9 @@ const AccountSwitcher = observer(
                                 const is_selected = account.account_id === current_loginid;
                                 const formatted_balance = addComma(account.balance, 2);
                                 const currency_display = getCurrencyDisplayCode(account.currency);
-                                const account_type_label =
-                                    account.account_type === 'real' ? (
-                                        <Localize i18n_default_text='Real account' />
-                                    ) : (
-                                        <Localize i18n_default_text='Demo account' />
-                                    );
+                                const account_type_label = (
+  <Localize i18n_default_text='Real account' />
+);
 
                                 return (
                                     <button
