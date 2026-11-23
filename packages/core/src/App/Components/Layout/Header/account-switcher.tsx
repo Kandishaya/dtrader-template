@@ -81,7 +81,7 @@ const AccountSwitcher = observer(
                                         iconSize='sm'
                                         fill='var(--color-text-warning)'
                                     />
-                                    <Text size='xs' color='secondary'>
+                                    <Text size='xs' color='secondary-alternate'>
                                         <Localize i18n_default_text='Failed to load' />
                                     </Text>
                                 </div>
